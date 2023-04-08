@@ -2,11 +2,12 @@
 ## Setup:
 1. Install Python 3+ and Pip package manager (bundled w/ Python in Microsoft Store)
 2. Use pip to install Selenium and BeautifulSoup by running the following commands from the project folder:
+3. Replace chromedriver.exe w/ chromedriver which matches installed chrome version
 
 >`pip install beautifulsoup4`
 
 >`pip install selenium`
 
-3. Run the code:
+4. Run the code:
 
 >`python main.py`

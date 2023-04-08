@@ -1,13 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.remote.remote_connection import LOGGER as selenium_logger
-from urllib3.connectionpool import log as url_lib_logger
 
-import logging
 import time
-
-selenium_logger.setLevel(logging.NOTSET)
-url_lib_logger.setLevel(logging.NOTSET)
 
 class WebSurfer:
     # Constructor
@@ -17,6 +11,7 @@ class WebSurfer:
         options.add_argument('--headless')
         options.add_argument('--disable-gpu')
         options.add_argument('--ignore-certificate-errors')
+        options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
         # Instantiate webdriver w/ specified options
         self.webdriver = webdriver.Chrome(chrome_options=options)
